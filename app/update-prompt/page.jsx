@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState, useClient } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Form = dynamic(() => import("@components/Form"), { ssr: false });
 

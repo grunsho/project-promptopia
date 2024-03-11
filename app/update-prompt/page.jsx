@@ -5,6 +5,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import Form from "@components/Form";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const EditPrompt = () => {
   const router = useRouter();
   const searchParams = useSearchParams();

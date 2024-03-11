@@ -1,10 +1,13 @@
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useClient } from "react";
 import { useRouter } from "next/router";
 
 const Form = dynamic(() => import("@components/Form"), { ssr: false });
 
 const UpdatePrompt = () => {
+
+  useClient();
+
   const router = useRouter();
   const { id } = router.query;
 

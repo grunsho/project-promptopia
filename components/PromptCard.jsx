@@ -15,12 +15,12 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const handleCopy = () => {
     setCopied(post.prompt);
     navigator.clipboard.writeText(post.prompt);
-    setTimeout(() => setCopied(""), 3000);
+    setTimeout(() => setCopied(false), 3000);
   };
 
   return (
     <div className="prompt_card">
-      <div className="flex justify-betwee items-start gap-5">
+      <div className="flex justify-between items-start gap-5">
         <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
           <Image
             src={post.creator.image}
